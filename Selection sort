@@ -1,0 +1,11 @@
+tab=[6,2,8,7,4,0,1,5,3,1]
+dlugosc=len(tab)
+
+for i in range (0,dlugosc-1):
+    min_index=i
+    for j in range(i+1,dlugosc):
+        if tab[min_index]>tab[j]:
+            min_index=j
+    tab[i], tab[min_index]=tab[min_index], tab[i]
+    
+print(tab)
