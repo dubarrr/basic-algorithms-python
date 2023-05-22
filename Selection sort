@@ -8,4 +8,4 @@ for i in range (0,length-1):
             min_index=j
     arr[i], arr[min_index]=arr[min_index], arr[i]
     
-print(tab)
+print(arr)
