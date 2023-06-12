@@ -1,0 +1,24 @@
+import random
+class Program:
+    def __init__(self):
+        self.tab=[]
+        self.wartownik=0
+        self.dlugosc=50;
+    def generujTablice(self):
+        self.tab=[random.randint(1,100) for i in range(0,50)]
+    def szukaj(self,szukana):
+        self.tab.append(szukana)
+        self.dlugosc += 1
+        i = 0
+        while i < self.dlugosc:
+            if self.tab[i] == szukana and i<50:
+                print(f"Znaleziono liczbe pod indeksem {str(i)}")
+                break
+            i += 1
+        if i == self.dlugosc:
+            print("Nie znaleziono liczby")
+        
+
+klasa=Program()
+klasa.generujTablice()
+klasa.szukaj(19)
